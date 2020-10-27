@@ -1,0 +1,132 @@
+body {
+    background-color: aliceblue;
+    background-image: url('../image/bg-inner.png');
+    color: #ffffff;
+}
+
+.layui-card {
+    background: #013954;
+}
+.layui-card-body {
+    padding: 7px 15px;
+}
+.layui-input,
+.layui-select,
+.layui-textarea {
+    border-color: aqua;
+    background: none;
+}
+
+.layui-form-selected dl {
+    background: none;
+}
+
+.chart-title {
+    
+    margin: 5px;
+}
+.chart-title-2 {
+    background-position: 0 10px;
+}
+.chart-title>span {
+    background: #4545e3;
+    padding: 8px 14px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    left: 5%;
+}
+
+.btn-search-chart {
+    background: none;
+    border-color: aqua;
+}
+
+.layui-table {
+    color: #ffffff;
+}
+
+.layui-table th {
+    padding: 2px 5px;
+    background-color: rgb(83,142,213);
+}
+
+.layui-table tr {
+    background: #333;
+}
+
+.layui-table td {
+    padding: 2px 5px;
+}
+
+.layui-table tbody tr:hover {
+    background: rgb(0, 0, 0, 0.3);
+    border: 1px solid #4545e3
+}
+.layui-form-select dl dd:hover {
+    background-color: #BDC3C7;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: #DC7633;
+}
+
+.layui-form-select dl {
+    border-color: aqua;
+}
+
+.layui-form-select .layui-input::placeholder {
+    color: #ffffff;
+}
+
+.layui-form-select .layui-input {
+    color: #ffffff;
+}
+
+.layui-btn {
+    color: #ffffff;
+}
+
+.layui-layer-content {
+    color: #000;
+}
+
+.layui-btn:hover {
+    color: aqua;
+}
+
+header {
+    font-size: 2.6rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn-group>button {
+    width: 100%;
+}
+
+.layui-table[lay-skin=line] {
+    border: none;
+}
+
+.layui-table td,
+.layui-table th {
+    border: none;
+}
+
+/* 修改select宽度 */
+.layui-form-item div.layui-input-inline,
+.layui-input-inline .layui-form-select {
+    width: 90%;
+}
+
+
+.title {
+    color: transparent;
+
+    background-color: #fff;
+
+    text-shadow: rgba(255, 255, 255, 0.5) 0 5px 6px, rgba(255, 255, 255, 0.2) 1px 3px 3px;
+
+    -webkit-background-clip: text;
+
+}
+

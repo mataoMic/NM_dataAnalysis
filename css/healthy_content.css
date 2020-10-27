@@ -1,0 +1,13 @@
+.OTT .layui-col-md6 {
+    padding: 0;
+}
+
+.type-tittle-btn {
+    margin-bottom: 5px;
+    cursor: auto;
+}
+
+.select-grop {
+    display: flex;
+    align-items: center;
+}

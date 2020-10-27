@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="refresh" content="1800">
+<title>IPTV/OTT质量与安全监测系统</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" href="../../css/index.css">
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            width: 1920px; max-height: 1080px;
+        }
+        #menubtn:hover{
+            border: 0 solid #54dcf2;
+            font-weight: bold;
+            /*border-top: 10px;*/
+            /*border-radius: 10px 10px 10px 10px;*/
+            cursor: pointer;
+        }
+        #menu{
+            list-style-type: none;
+            background-color: rgb(4,15,60);
+            z-index: 3000;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            display: none;
+        }
+        #menu>li{
+            display: block;
+            height: 70px;
+            width: 130px;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            border: 1px solid #54dcf2;
+            border-left: 0;
+            cursor: pointer;
+        }
+        #menu>li:hover{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .number-show{
+            display: none;
+        }
+        .qmott{
+            display: flex;
+            flex-direction: row;
+            justify-content : center;
+            height: 165px;
+        }
+        #alarmInfo{
+            height: 272px;
+        }
+        #alarmInfo table thead th,td{
+            background: rgb(4,15,60);
+            color: #419aff;
+            font-size: 12px;
+            font-weight: normal;
+            border-right: 0px solid;
+            height: 37px;
+        }
+        #alarmInfo table thead th{
+            font-weight: bold;
+            border-right: 0px !important;
+        }
+        #alarmInfo table tbody tr:nth-of-type(n+1){
+            background: #1d2a42 !important;
+        }
+        #alarmInfo table tbody tr:nth-of-type(2n+1){
+            background: rgb(4,15,60) !important;
+        }
+        #alarmInfo table tr td:nth-child(1) {
+            color: #87CEFA;
+        }
+        #alarmInfo table tr td:nth-child(2) {
+            color: #e9aa00;
+        }
+        #alarmInfo table tr td:nth-child(3) {
+            color: #53bf18;
+        }
+        #alarmInfo table tr td:nth-child(4) {
+            color: #f9504a;
+        }
+        #alarmInfo table tr td:nth-child(5) {
+            color: rgb(16,192,167);
+        }
+        #alarmInfo table tr td:nth-child(6) {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div id="menubtn" style="margin-left:5px;text-align:left;z-index:3000;width:30px; height:30px;position:absolute;vertical-align:middle;left:0px;top:60px;">
+    <!--<img src="" style="margin-top:5px;-webkit-transform:rotate(-90deg);"/>-->
+    <div class="name-title">
+        ≡≡
+    </div>
+</div>
+<ul id="menu">
+    <li><span>报警与业务管理</span></li>
+    <li><span>设备管理</span></li>
+    <li><span>个人信息</span></li>
+</ul>
+<!--头部-->
+<div class="header">
+    <!--<img src='/image/pc/common/logo.png' style="display:inline;position:absolute;left:0;top:0;width:155px;height:50px;">
+    <div id="menu" style="width:30px; height:30px;text-align: center;vertical-align:middle;display:inline-block;padding:0;margin:0;">
+        <img src="/image/pc/theme/blueStyle/top_arrow.png" style="line-height:30px;-webkit-transform:rotate(-90deg);"/>
+    </div>-->
+    IPTV/OTT质量与安全监测系统
+    <a href="javascript:;" class="a-access" style="display: none;">
+        <button class="button type1">
+    		返回
+    	</button>
+    </a>
+</div>
+<!--主体-->
+<div class="main clearfix">
+    <div class="main-left">
+        <div class="border-container">
+            <div class="name-title" >
+                &nbsp;
+            </div>
+            <div id="radar" style="height:0px;"></div>
+            <span class="uetitle">IPTV/OTT用户体验</span>
+            <span class="uesubtitle">IPTV</span>
+            <div class="ueiptv">
+                <div class="childueiptv" id="iptvchild1"></div>
+                <div class="childueiptv" id="iptvchild2"></div>
+                <div class="childueiptv" id="iptvchild3"></div>
+                <div class="childueiptv" id="iptvchild4"></div>
+            </div>
+            <span class="uesubtitle">OTT</span>
+            <div class="ueott">
+                <div class="childueott" id="ottchild1"></div>
+                <div class="childueott" id="ottchild2"></div>
+                <div class="childueott" id="ottchild3"></div>
+                <div class="childueott" id="ottchild4"></div>
+            </div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+        <div class="border-container">
+            <div class="maptitle">质差监测</div>
+            <span class="uesubtitle">OTT</span>
+            <div class="qmott">
+                <!--<div class="childqmott" id="qmchild1"></div>
+                <div class="childqmott" id="qmchild2"></div>
+                <div class="childqmott" id="qmchild3"></div>
+                <div class="childqmott" id="qmchild4"></div>-->
+            </div>
+            <span class="uesubtitle">IPTV</span>
+            <div style="margin-top:15px;height:102px;overflow-y:auto;">
+                <table class="table table-kingdargen iptv_table">
+                    <thead>
+                    <tr>
+                        <th>IPTV</th>
+                        <th>断流率</th>
+                        <th>丢包率</th>
+                        <th>码率</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>广电入口<br>频道总数：<span class="tvInfo"></span></td>
+                        <td><span class="tvInfo"></span></td>
+                        <td><span class="tvInfo"></span></td>
+                        <td><span class="tvInfo"></span></td>
+                    </tr>
+                    <tr>
+                        <td>平台出口<br>频道总数：<span class="platInfo"></span></td>
+                        <td><span class="platInfo"></span></td>
+                        <td><span class="platInfo"></span></td>
+                        <td><span class="platInfo"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="areaPercent" style="overflow-y:auto;height:181px;display: flex;flex-wrap:wrap;text-align:center;margin-top:5px;"></div>
+            <div id="juniorservice" style="display: none;"></div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+    </div>
+    <div class="main-middle">
+        <div class="border-container">
+            <div class="maptitle">内蒙古地图</div>
+            <div id="mapadd"></div>
+            <img src="../../image/district.png" style="border-radius:50%;position:absolute;right:0;bottom:1px;box-sizing:content-box;width:150px;height:100px;">
+            <div class="number-show">
+                <span class="span-name">报警数量</span>
+                <ul id="alarmLevel">
+                    <li>
+                        <input type="color" value="#92d050" disabled class="alarm_color"/>
+                        <span class="alarm_text">20-25</span>
+                    </li>
+                    <li>
+                        <input type="color" value="#ffa312" class="alarm_color"/>
+                        <span class="alarm_text">15-20</span>
+                    </li>
+                    <li>
+                        <input type="color" value="#92d050" class="alarm_color"/>
+                        <span class="alarm_text">10-15</span>
+                    </li>
+                    <li>
+                    <li>
+                        <input type="color" value="#ffd811" class="alarm_color"/>
+                        <span class="alarm_text">5-10</span>
+                    </li>
+                    </li>
+                    <li>
+                    <li>
+                        <input type="color" value="#ffd5ff" class="alarm_color"/>
+                        <span class="alarm_text">0-5</span>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+        <div class="border-container">
+            <div class="maptitle">传输质量报警信息</div>
+            <div id="alarmInfo">
+            </div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+    </div>
+    <div class="main-right">
+        <div class="border-container">
+            <div class="maptitle">内容健康监测</div>
+            <div class="ueott">
+                <div class="childchott" id="contentchild1"></div>
+                <div class="childchott" id="contentchild2"></div>
+            </div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+        <div class="border-container">
+            <div class="maptitle">频道安全防篡改</div>
+            <span class="uesubtitle">IPTV 12个地级市</span>
+            <div id="channelSafe" style="height:310px;"></div>
+            <!--height:101px;-->
+            <div style="overflow-y:auto;">
+            <span class="uesubtitle">OTT cdn</span>
+            <div id="ottCdn" style="height: 313px;margin-top:5px;"></div>
+            <span class="top-left border-span"></span>
+            <span class="top-right border-span"></span>
+            <span class="bottom-left border-span"></span>
+            <span class="bottom-right border-span"></span>
+        </div>
+    </div>
+</div>
+<script src="../../common/jquery.min.js"></script>
+<script src="../../common/echarts.min.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../common/map/shandong.js"></script>
+<script src="../../common/map/js/province/neimenggu.js"></script>
+<script src="../../common/editable_table.js"></script>
+<script src="../../common/common.js"></script>
+</div>
+</body>
+</html>

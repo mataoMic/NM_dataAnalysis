@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="refresh" content="1800">
+<title>内容健康历史详情</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" href="../../css/index.css">
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .pCls{
+            margin: 10px 0 30px 20px;
+        }
+        .selCls{
+            width: 130px;
+            height: 25px;
+        }
+        #alarmList{
+            height:300px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+<p class="pCls">
+    <select class="selCls"><option>IPTV</option><option>OTT</option></select>
+    <select class="selCls"><option>省公司</option></select>
+    <select class="selCls"><option>所有频道</option></select>
+    <select class="selCls"><option>最近8小时</option></select>
+</p>
+<div style="width:50%">
+    <div id="iptvue" style="height: 300px;"></div>
+    <div id="alarmList"></div>
+</div>
+</body>
+<script src="../../common/jquery.min.js"></script>
+<script src="../../common/echarts.min.js"></script>
+<script src="../../common/editable_table.js"></script>
+<script src="../../js/content_health_text.js"></script>
+</html>

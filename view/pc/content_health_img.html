@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="refresh" content="1800">
+<title>内容健康历史详情</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link rel="stylesheet" href="../../css/index.css">
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        .pCls{
+            margin: 10px 0 20px 20px;
+            height: 25px;
+            font-size: 15px;
+        }
+        .selCls{
+            width: 130px;
+            height: 25px;
+        }
+        #alarmList{
+            position: absolute;
+            height: 300px;
+            left: 100px;
+            right: 100px;
+            margin: auto;
+        }
+        #timeDiv{
+            display: none;
+        }
+        #timeDiv label{
+            color: #fff;
+        }
+        .timeCls{
+            height: 25px !important;
+            width: 200px !important;
+        }
+        #searchBtn{
+            height: 25px;
+            line-height: 25px;
+            width: 60px;
+            vertical-align: middle;
+            margin-top: -4px;
+        }
+    </style>
+</head>
+<body>
+<p class="pCls">
+    <select class="selCls" id="signalType"></select>
+    <select class="selCls" id="addr"></select>
+    <input class="selCls" id="channel" value="所有频道"/>
+    <select class="selCls" id="timeSel">
+        <option value="0">最近8小时</option>
+        <option value="1">最近1天</option>
+        <option value="2">最近1周</option>
+        <option value="3">自定义时间</option>
+    </select>
+    <span id="timeDiv">
+        <label>起始时间：</label><input value="1990-01-01 00:00:00" id="startDate" type="text" class="timeCls Wdate pointer" onclick="timeFmt()">
+        <label>终止时间：</label><input id="endDate" type="text" class="timeCls Wdate pointer" onclick="timeFmt()">
+    </span>
+    <button id="searchBtn">查询</button>
+</p>
+<div id="iptvue" style="height: 350px;"></div>
+<div id="alarmList"></div>
+</body>
+<script type="text/javascript" src="../../common/jquery.min.js"></script>
+<script type="text/javascript" src="../../common/echarts.min.js"></script>
+<script type="text/javascript" src="../../common/editable_table.js"></script>
+<script type="text/javascript" src="../../js/content_health_img.js"></script>
+<script type="text/javascript" src="../../common/datetimepicker/lang/en.js"></script>
+<script type="text/javascript" src="../../common/datetimepicker/lang/zh-cn.js"></script>
+<script type="text/javascript" src="../../common/datetimepicker/WdatePicker.js"></script>
+</html>

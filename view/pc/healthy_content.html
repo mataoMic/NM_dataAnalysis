@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="refresh" content="1800">
+    <title>内容健康历史详情</title>
+    <link rel="stylesheet" type="text/css" href="../../common/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="../../css/healthy_content.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <legend class="title">内容健康历史详情</legend>
+        </header>
+        <div class="layui-row layui-col-space15" style="margin: 0 10px;">
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="chart-title">
+                        <span class="chart-title">图像内容历史详情</span>
+                    </div>
+                    <div class="layui-card-body">
+                        <form class="layui-form" action="">
+                            <div class="layui-row select-grop">
+                                <div class="layui-col-xs10">
+                                    <div class="layui-row">
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="pic_platform_select" name="company">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="pic_company_select" name="company">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="pic_channel_select" name="channel">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="pic_time_select" name="time">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <button id="s_pic" type="button"
+                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <div id="pic" style="height: 300px;"></div>
+                        </div>
+                        <div class="layui-card">
+                            <div class="chart-title">
+                                <span class="chart-title">非法图像报警列表</span>
+                            </div>
+                            <div class="layui-card-body">
+                                <div class="layui-form"></div>
+                                <table id="pic_alarm_table" class="layui-table" lay-skin="line">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>报警时间</th>
+                                            <th>频道名称</th>
+                                            <th>报警地点</th>
+                                            <th>频道IP</th>
+                                            <th>报警值</th>
+                                            <th>报警画面</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="chart-title">
+                        <span class="chart-title">字幕内容历史详情</span>
+                    </div>
+                    <div class="layui-card-body">
+                        <form class="layui-form" action="">
+                            <div class="layui-row select-grop">
+                                <div class="layui-col-xs10">
+                                    <div class="layui-row select-grop">
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="subtitles_platform_select" name="company">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="subtitles_company_select" name="company">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="subtitles_channel_select" name="channel">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="layui-input-inline">
+                                                <select id="subtitles_time_select" name="time">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs2">
+                                    <button id="s_subtitles" type="button"
+                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div>
+                            <div id="subtitles" style="height: 300px;"></div>
+                        </div>
+                        <div class="layui-card">
+                            <div class="chart-title">
+                                <span class="chart-title">非法字幕报警列表</span>
+                            </div>
+                            <div class="layui-card-body">
+                                <div class="layui-form"></div>
+                                <table id="subtitles_alarm_table" class="layui-table" lay-skin="line">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>报警时间</th>
+                                            <th>频道名称</th>
+                                            <th>报警地点</th>
+                                            <th>频道IP</th>
+                                            <th>报警值</th>
+                                            <th>报警画面</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="../../common/jquery.min.js"></script>
+<script src="../../common/layui/layui.js"></script>
+<script src="../../common/echarts.min.js"></script>
+<script src="../../js/healthy_content.js"></script>
+<script src="../../js/healthy_content_chartsOptions.js"></script>
+<script src="../../js/selectLoading.js"></script>
+
+</html>
