@@ -6,6 +6,7 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="refresh" content="1800">
 <title>IPTV/OTT质量与安全监测系统</title>
+<link rel="stylesheet" type="text/css" href="../../common/layui/css/layui.css">
 <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
 <link rel="stylesheet" href="../../css/index.css">
     <style>
@@ -13,7 +14,7 @@
             margin: 0; padding: 0;
         }
         body{
-            width: 1920px; max-height: 1080px;
+           max-height: 1080px;
         }
         #menubtn:hover{
             border: 0 solid #54dcf2;
@@ -123,7 +124,8 @@
 </div>
 <!--主体-->
 <div class="main clearfix">
-    <div class="main-left">
+    <div class="layui-row layui-col-space10">
+    <div class="layui-col-md4">
         <div class="border-container">
             <div class="name-title" >
                 &nbsp;
@@ -193,7 +195,7 @@
             <span class="bottom-right border-span"></span>
         </div>
     </div>
-    <div class="main-middle">
+    <div class="layui-col-md4">
         <div class="border-container">
             <div class="maptitle">内蒙古地图</div>
             <div id="mapadd"></div>
@@ -242,7 +244,7 @@
             <span class="bottom-right border-span"></span>
         </div>
     </div>
-    <div class="main-right">
+    <div class="layui-col-md4">
         <div class="border-container">
             <div class="maptitle">内容健康监测</div>
             <div class="ueott">
@@ -267,10 +269,12 @@
             <span class="bottom-left border-span"></span>
             <span class="bottom-right border-span"></span>
         </div>
+        </div>
     </div>
 </div>
 <script src="../../common/jquery.min.js"></script>
 <script src="../../common/echarts.min.js"></script>
+<script src="../../common/layui/layui.js"></script>
 <script src="../../js/index.js"></script>
 <script src="../../common/map/shandong.js"></script>
 <script src="../../common/map/js/province/neimenggu.js"></script>

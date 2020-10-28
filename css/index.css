@@ -34,7 +34,7 @@ body{
 .main{
     padding: 0 30px 30px;
 }
-.main-left,
+/* .main-left,
 .main-right{
     float: left;
     width: 30%;
@@ -44,7 +44,7 @@ body{
     float: left;
     width: 40%;
     padding: 0 10px;
-}
+} */
 
 .border-container {
     position: relative;
