@@ -1,0 +1,10 @@
+.select-grop {
+    display: flex;
+    align-items: center;
+}
+.layui-card-header{
+    color: #ffffff;
+}
+.iptv-table{
+    width: 100%;
+}

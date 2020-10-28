@@ -5,11 +5,10 @@ body {
 }
 
 .layui-card {
+    /* background: #013954; */
     background:#040f3c;
 }
-.layui-card-body {
-    padding: 7px 15px;
-}
+
 .layui-input,
 .layui-select,
 .layui-textarea {
@@ -22,13 +21,18 @@ body {
 }
 
 .chart-title {
-    
     margin: 5px;
 }
-.chart-title-2 {
-    background-position: 0 10px;
+.margin-bottom{
+    margin-bottom: 3px;
 }
+/* .chart-title-2 {
+    background: url('../image/titile-bg.png') no-repeat;
+    background-position: 0 10px;
+} */
+
 .chart-title>span {
+    font-size: 14px;
     background: #4545e3;
     padding: 8px 14px;
     border-bottom-right-radius: 6px;
@@ -62,12 +66,6 @@ body {
     background: rgb(0, 0, 0, 0.3);
     border: 1px solid #4545e3
 }
-.layui-form-select dl dd:hover {
-    background-color: #BDC3C7;
-}
-.layui-form-select dl dd.layui-this {
-    background-color: #DC7633;
-}
 
 .layui-form-select dl {
     border-color: aqua;
@@ -98,6 +96,9 @@ header {
     text-align: center;
     margin: 10px 0;
 }
+.layui-table-header{
+    border-bottom: none;
+} 
 
 .btn-group>button {
     width: 100%;
@@ -105,6 +106,12 @@ header {
 
 .layui-table[lay-skin=line] {
     border: none;
+}
+.layui-table-view{
+    border:none;
+}
+.layui-table{
+    background-color: #666666;
 }
 
 .layui-table td,
@@ -130,3 +137,12 @@ header {
 
 }
 
+/* tab样式修改 */
+.layui-tab-title .layui-this{
+    color: #ffffff;
+    background: #4B0082;
+    border-radius: 6px 6px 0 0;
+}
+.layui-tab-title .layui-this:after{
+    border:none;
+}

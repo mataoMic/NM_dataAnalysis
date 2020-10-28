@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="refresh" content="1800">
+    <title>IPTV/OTT质量劣化历史详情</title>
+    <link rel="stylesheet" type="text/css" href="../../common/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/iptv_quality2.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <legend class="title">IPTV/OTT质量劣化历史详情</legend>
+        </header>
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md4">
+                <div class="layui-card">
+                    <div class="chart-title">
+                        <span>IPTV平台</span>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-card-body iptv">
+                            <form class="layui-form" action="">
+                                <div class="layui-row select-grop">
+                                    <div class="layui-col-xs10">
+                                        <div class="layui-row">
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv_company_select" name="company">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv_channel_select" name="company">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv_time_select" name="time">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs2">
+                                        <button id="s_iptv" type="button"
+                                            class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                            data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <div id="iptv" style="height: 300px;"></div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-card-body iptv1">
+                            <form class="layui-form" action="">
+                                <div class="layui-row select-grop">
+                                    <div class="layui-col-xs10">
+                                        <div class="layui-row">
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv1_company_select" name="company">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv1_channel_select" name="company">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs4">
+                                                <div class="layui-input-inline">
+                                                    <select id="iptv1_time_select" name="time">
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs2">
+                                        <button id="s_iptv" type="button"
+                                            class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                            data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <div id="iptv1" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="layui-col-md8 OTT">
+                <div class="layui-card">
+                    <div class="chart-title">
+                        <span >OTT平台</span>
+                    </div>
+                    <div class="layui-card-body">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md6">
+                                <div class="layui-card-body">
+                                    <form class="layui-form" action="formDemo">
+                                        <div class="layui-row select-grop">
+                                            <div class="layui-col-xs10">
+                                                <div class="layui-row">
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hw_company_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hw_channel_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hw_time_select" name="time">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs2">
+                                                <button id="s_hw" type="button"
+                                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <div id="hw" style="height: 300px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="layui-card-body">
+                                    <form class="layui-form" action="">
+                                        <div class="layui-row select-grop">
+                                            <div class="layui-col-xs10">
+                                                <div class="layui-row">
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="zx_company_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="zx_channel_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="zx_time_select" name="time">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs2">
+                                                <button id="s_zx" type="button"
+                                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <div id="zx" style="height: 300px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-md6">
+                                <div class="layui-card-body">
+                                    <form class="layui-form" action="">
+                                        <div class="layui-row select-grop">
+                                            <div class="layui-col-xs10">
+                                                <div class="layui-row">
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="fh_company_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="fh_channel_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="fh_time_select" name="time">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs2">
+                                                <button id="s_fh" type="button"
+                                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <div id="fh" style="height: 300px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="layui-card-body">
+                                    <form class="layui-form" action="">
+                                        <div class="layui-row select-grop">
+                                            <div class="layui-col-xs10">
+                                                <div class="layui-row">
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hy_company_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hy_channel_select" name="company">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="layui-col-xs4">
+                                                        <div class="layui-input-inline">
+                                                            <select id="hy_time_select" name="time">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layui-col-xs2">
+                                                <button id="s_hy" type="button"
+                                                    class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
+                                                    data-anim="layui-anim-upbit" lay-submit="">查询</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <div id="hy" style="height: 300px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../common/jquery.min.js"></script>
+<script src="../../common/layui/layui.js"></script>
+<script src="../../common/echarts.min.js"></script>
+<script src="../../js/iptv_quality2.js"></script>
+<script src="../../js/ott_quality2.js"></script>
+<script>
+     window.onload =function(){
+        var height=$(window).height();
+        if(height>1080){
+            $("#chart-left").height(height-80);
+        }
+    };
+</script>
+
+</html>
