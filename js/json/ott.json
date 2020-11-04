@@ -1,0 +1,15 @@
+[
+{"date":20201017,"testNumber":266174,"failuresNumber":2220,"erroeList":"20201017044158.xlsx"},
+{"date":20201012,"testNumber":263246,"failuresNumber":2201,"erroeList":"20201012100321.xlsx"},
+{"date":20201007,"testNumber":260764,"failuresNumber":2158,"erroeList":"20201007153423.xlsx"},
+{"date":20201003,"testNumber":259317,"failuresNumber":1874,"erroeList":"20201003060048.xlsx"},
+{"date":20200928,"testNumber":252925,"failuresNumber":1846,"erroeList":"20200928161921.xlsx"},
+{"date":20200805,"testNumber":240974,"failuresNumber":865,"erroeList":"20200805170304.xlsx"},
+{"date":20200801,"testNumber":275109,"failuresNumber":815,"erroeList":"20200801213316.xlsx"},
+{"date":20200731,"testNumber":15638,"failuresNumber":173,"erroeList":"20200731224244.xlsx"},
+{"date":20200726,"testNumber":15582,"failuresNumber":172,"erroeList":"20200726212740.xlsx"},
+{"date":20200717,"testNumber":326358,"failuresNumber":1456,"erroeList":"20200717022322.xlsx"},
+{"date":20200713,"testNumber":342632,"failuresNumber":2238,"erroeList":"20200713235321.xlsx"},
+{"date":20200711,"testNumber":341484,"failuresNumber":1838,"erroeList":"20200711110222.xlsx"},
+{"date":20200709,"testNumber":313596,"failuresNumber":2407,"erroeList":"20200709092841.xlsx"}
+]

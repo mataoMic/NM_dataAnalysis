@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="refresh" content="1800">
-    <title>IPTV/OTTO用户体验历史详情</title>
+    <title>IPTV/OTT用户体验历史详情</title>
     <link rel="stylesheet" type="text/css" href="../../common/layui/css/layui.css">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/iptv_ue.css">
@@ -15,7 +15,7 @@
 <body>
     <div>
         <header>
-            <legend class="title">IPTV/OTTO用户体验历史详情</legend>
+            <legend class="title">IPTV/OTT用户体验历史详情</legend>
         </header>
         <div class="layui-row">
             <div class="layui-tab" lay-filter="demo">
@@ -47,20 +47,20 @@
                                                     </div>
                                                     <div class="layui-col-xs4">
                                                         <div class="layui-input-inline">
-                                                            <select id="iptv_time_select" name="time">
-                                                            </select>
+                                                            <input type="text" class="layui-input" id="iptv-date" placeholder="请选择时间范围">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="layui-col-xs2">
-                                                <button id="s_iptv" type="button"
+                                                <button id="s_iptv_authentication" type="button"
                                                     class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
                                                     data-anim="layui-anim-upbit" lay-submit="">查询</button>
                                             </div>
                                         </div>
                                     </form>
                                     <div>
+                                        <!-- <span class="btn-back-chart">返回</span> -->
                                         <div id="iptv" style="height: 400px;"></div>
                                     </div>
                                     <div class="iptv-table">
@@ -90,14 +90,13 @@
                                                     </div>
                                                     <div class="layui-col-xs4">
                                                         <div class="layui-input-inline">
-                                                            <select id="ott_time_select" name="time">
-                                                            </select>
+                                                            <input type="text" class="layui-input" id="ott-date" placeholder="请选择时间范围">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="layui-col-xs2">
-                                                <button id="s_iptv" type="button"
+                                                <button id="s_ott_authentication" type="button"
                                                     class="layui-btn layui-btn-primary layui-btn-sm btn-search-chart"
                                                     data-anim="layui-anim-upbit" lay-submit="">查询</button>
                                             </div>
@@ -181,10 +180,27 @@
 
 <script src="../../common/jquery.min.js"></script>
 <script src="../../common/layui/layui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="../../common/echarts.min.js"></script>
 <script src="../../js/constant.js"></script>
-<script src="../../js/iptv_ue.js"></script>
-<script src="../../js/iptv_ue_table.js"></script>
-<script src="../../js/ue_live_telecast.js"></script>
+<script src="../../js/iptv_ue1.js"></script>
+<script type="text/html" id="titleTpl">
+    <img onclick="showimg(this)" style="display: inline-block; width: 50%; height: 100%;" src="{{d.imgurl}}">
+</script>
+<script type="text/html" id="titleTpl1">
+    <img onclick="showimg(this)" style="display: inline-block; width: 50%; height: 100%;" src="{{d.imgurl}}">
+</script>
+<script>
+    function showimg(t) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: '600px',
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: true,
+            content: '<img style="display: inline-block; width: 100%; height: 100%;" src="'+t.src+'">'
+        });
+    }
+</script>
+<!-- <script src="../../js/iptv_ue_table.js"></script> -->
 </html>

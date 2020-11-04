@@ -16,7 +16,6 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
     func(startDate, endDate);
     //图标数据
     var chartList=[];
-
    
     //获取日期，num为负数表示获取前n天的日期,0为今天的日期,正数为后n天的日期，minutes当前时间加minutes
     function getDate(num, minutes){
@@ -120,7 +119,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                            containLabel: true
                        },
                        xAxis: {
-                           data: dateList,
+                           data: dateList1,
                            axisLine: {
                              show: true, //隐藏X轴轴线
                              lineStyle: {
@@ -247,7 +246,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                                    }
                                },
                                yAxisIndex:'0',
-                               data:testList//data.values
+                               data:testList1//data.values
                            },
                            {
                                name:'测试失败节目总数',
@@ -273,7 +272,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                                    }
                                },
                                yAxisIndex:'1',
-                               data: failuresList//data.values
+                               data: failuresList1//data.values
                            },
                            {
                                name:'成功率',
@@ -299,7 +298,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                                    borderWidth: 2,
                                },
                                yAxisIndex:'2',
-                               data: successRate//data.values
+                               data: successRate1//data.values
                            },
                        ]
                    };
@@ -603,22 +602,22 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                 dataType: 'text',
                 success: function(json){
                     var datas1 = [{id:'1',text:'IPTV'},{id:'2',text:'OTT'}]
-                    var datas2 = [{id:'1',text:'省公司'},{id:'2',text:'乌海市'},{id:'3',text:'赤峰市'}]
-                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近1个月'}]
+                    var datas2 = [{id:'1',text:'极光'},{id:'2',text:'华研'},{id:'3',text:'广电'}]
+                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近3个月'}]
                     layui.use(['form'], function () {
                         var form = layui.form,
                             layer = layui.layer
                             selectUtil1.render({
                                 id: 'iptv_company_select',
-                                data: datas3
+                                data: datas1
                             });
                             selectUtil1.render({
                                 id: 'iptv_channel_select',
-                                data: datas1
+                                data: datas2
                             });
                             selectUtil2.render({
                                 id: 'iptv_time_select',
-                                data: datas2
+                                data: datas3
                             });
                             
                             //监听提交
@@ -647,14 +646,14 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                 dataType: 'text',
                 success: function(json){
                     var datas1 = [{id:'1',text:'IPTV'},{id:'2',text:'OTT'}]
-                    var datas2 = [{id:'1',text:'省公司'},{id:'2',text:'乌海市'},{id:'3',text:'赤峰市'}]
-                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近1个月'}]
+                    var datas2 = [{id:'1',text:'百事通'},{id:'2',text:'华研'},{id:'3',text:'广电'}]
+                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近3个月'}]
                     layui.use(['form'], function () {
                         var form = layui.form,
                             layer = layui.layer
                             selectUtil1.render({
                                 id: 'ott_company_select',
-                                data: datas3
+                                data: datas1
                             });
                             selectUtil1.render({
                                 id: 'ott_channel_select',
@@ -662,14 +661,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                             });
                             selectUtil2.render({
                                 id: 'ott_time_select',
-                                data: datas1
-                            });
-                            //监听提交
-                            form.on('submit(demo1)', function(data){
-                                layer.alert(JSON.stringify(data.field), {
-                                title: '最终的提交信息'
-                                })
-                                return false;
+                                data: datas3
                             });
                     })
                     resolve();
@@ -690,14 +682,14 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                 dataType: 'text',
                 success: function(json){
                     var datas1 = [{id:'1',text:'IPTV'},{id:'2',text:'OTT'}]
-                    var datas2 = [{id:'1',text:'省公司'},{id:'2',text:'乌海市'},{id:'3',text:'赤峰市'}]
-                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近1个月'}]
+                    var datas2 = [{id:'1',text:'极光'},{id:'2',text:'华研'},{id:'3',text:'广电'}]
+                    var datas3 = [{id:'1',text:'最近8小时'},{id:'2',text:'最近1天'},{id:'3',text:'最近1周'},{id:'3',text:'最近1周'},{id:'4',text:'最近3个月'}]
                     layui.use(['form'], function () {
                         var form = layui.form,
                             layer = layui.layer
                             selectUtil1.render({
                                 id: 'statistics_company_select',
-                                data: datas3
+                                data: datas1
                             });
                             selectUtil1.render({
                                 id: 'statistics_channel_select',
@@ -705,7 +697,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                             });
                             selectUtil2.render({
                                 id: 'statistics_time_select',
-                                data: datas1
+                                data: datas3
                             });
                             //监听提交
                             form.on('submit(demo1)', function(data){
@@ -732,265 +724,7 @@ document.write("<script language=javascript src='/js/constant.js'></script>");
                 url: szServer,
                 dataType: 'text',
                 success: function(json){
-                    var colors = ["#FFA500",'#0FC5F3','#00FA9A'];
-                    //折线图显示
-                    var option = {
-                        // backgroundColor:'#232d36',
-                        legend:{
-                            data:['测试节目总数', '测试失败节目总数', '成功率', ],
-                            textStyle:{
-                                color:'#fff',
-                                align: 'left',
-                            },
-                            x:'left'
-                        },
-                        dataZoom: [
-                            {
-                                show: true,
-                                height: 10,
-                                xAxisIndex: [0],
-                                bottom: 10,
-                                
-                                // "start": 10,
-                                // "end": 80,
-                                handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
-                                handleSize: '110%',
-                                handleStyle: {
-                                    color: "#5B3AAE",
-                                },
-                                textStyle:{
-                                    color:"rgba(204,187,225,0.5)",
-                                },
-                                fillerColor:"rgba(67,55,160,0.4)",
-                                borderColor: "rgba(204,187,225,0.5)",
-                        
-                            },
-                            {
-                                type: 'inside',
-                                xAxisIndex: 0,
-                                show: true,
-                                height: 15,
-                            },
-                        ],
-                        tooltip: {
-                            trigger: 'axis',
-                            axisPointer: {
-                                lineStyle: {
-                                    color: {
-                                        type: 'linear',
-                                        x: 0,
-                                        y: 0,
-                                        x2: 0,
-                                        y2: 1,
-                                        colorStops: [{
-                                            offset: 0,
-                                            color: 'rgba(0, 255, 233,0)'
-                                        }, {
-                                            offset: 0.5,
-                                            color: 'rgba(255, 255, 255,1)',
-                                        }, {
-                                            offset: 1,
-                                            color: 'rgba(0, 255, 233,0)'
-                                        }],
-                                        global: false
-                                    }
-                                },
-                            },
-                        },
-                        grid: {
-                            top: '15%',
-                            left: '10%',
-                            right: '5%',
-                            bottom: '15%',
-                            containLabel: true
-                        },
-                        xAxis: {
-                            data: dateList,
-                            axisLine: {
-                              show: true, //隐藏X轴轴线
-                              lineStyle: {
-                                color: '#26D9FF',
-                                width:2
-                              }
-                            },
-                            axisTick: {
-                              show: true //隐藏X轴刻度
-                            },
-                            axisLabel: {
-                              show: true,
-                              textStyle: {
-                                color: "rgba(250,250,250,0.6)", //X轴文字颜色
-                                fontSize: 12
-                              }
-                            },
-                          },
-                        
-                    
-                        yAxis: [
-                             {//第一个y轴位置在左侧
-                            position:'left',
-                            type : 'value',
-                            offset:20,
-                            name: '测试节目总数',
-                            axisLine: {
-                                lineStyle: {
-                                    color: colors[0],
-                                    width: 2
-                                }
-                            },
-                            splitLine: {
-                                show: false
-                            },
-                            axisLabel: {
-                                show: true,
-                                margin: 20,
-                                textStyle: {
-                                    color: colors[0],
-                    
-                                },
-                                formatter: '{value} 万'
-                            },
-                            axisTick: {
-                                show: true,
-                            },
-                        },
-                        {//第二个y轴在右侧
-                            position:'left',
-                            offset:110,
-                            max:10000,
-                            type : 'value',
-                            name: '测试失败节目总数',
-                            axisLine: {
-                                lineStyle: {
-                                    color: colors[1],
-                                    width: 2
-                                }
-                            },
-                            axisLabel: {
-                                show: true,
-                                margin: 20,
-                                textStyle: {
-                                    color: colors[1],
-                                },
-                            },
-                            axisTick: {
-                                show: true,
-                            },
-                            splitLine: {
-                                show: false
-                            },
-                        },
-                        {//第三个y轴也在左侧，距第二个30个像素
-                            position:'right',
-                            type : 'value',
-                            name: '成功率',
-                            min:95,
-                            axisLine: {
-                                lineStyle: {
-                                    color: colors[2],
-                                    width: 2
-                                }
-                            },
-                            axisLabel: {
-                                show: true,
-                                margin: 20,
-                                textStyle: {
-                                    color: colors[2],
-                                },
-                                formatter: '{value} %'
-                            },
-                            splitLine: {
-                                show: false
-                            },
-                        }],
-                        series: [
-                            {
-                                name:'测试节目总数',
-                                type: 'bar',
-                                barWidth: 10,
-                                itemStyle: {
-                                    normal: {
-                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                                offset: 0,
-                                                color: "rgba(255,165,0, 1)"
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: "rgba(255,165,0, 1)"
-                                            }
-                                        ]),
-                                        borderColor: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                                offset: 0,
-                                                color: "rgba(160,196,225, 1)"
-                                            },
-                                            {
-                                                offset: 1,
-                                                color: "rgba(255,165,0, 1)"
-                                            }
-                                        ]),
-                                        borderWidth: 2
-                                    }
-                                },
-                                yAxisIndex:'0',
-                                data:testList//data.values
-                            },
-                            {
-                                name:'测试失败节目总数',
-                                type: 'bar',
-                                barWidth: 10,
-                                itemStyle: {
-                                    normal: {
-                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                            offset: 0,
-                                            color: 'rgba(15,197,243,1)'
-                                        }, {
-                                            offset: 1,
-                                            color: 'rgba(15,197,243,1)'
-                                        }]),
-                                        borderColor: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                            offset: 0,
-                                            color: 'rgba(180,240,255,1)'
-                                        }, {
-                                            offset: 1,
-                                            color: 'rgba(15,197,243,1)'
-                                        }]),
-                                        borderWidth: 2
-                                    }
-                                },
-                                yAxisIndex:'1',
-                                data: failuresList//data.values
-                            },
-                            {
-                                name:'成功率',
-                                type: 'line',
-                                smooth:true, 
-                                symbol: 'circle',
-                                symbolSize: 5,
-                                lineStyle: {
-                                    normal: {
-                                        color: "#00FA9A",
-                                    },
-                                },
-                                label: {
-                                    show: true,
-                                    position: 'top',
-                                    textStyle: {
-                                        color: '#00FA9A',
-                                    }
-                                },
-                                itemStyle: {
-                                    color: "#00FA9A",
-                                    borderColor: "#00FA9A",
-                                    borderWidth: 2,
-                                },
-                                yAxisIndex:'2',
-                                data: successRate//data.values
-                            },
-                        ]
-                    }; 
-                    var listener=echarts.init(document.getElementById('statistics'));
-                    listener.setOption(option);
-                    chartList.push(listener);
+                  
                     resolve();
                 },
                 error: function(){

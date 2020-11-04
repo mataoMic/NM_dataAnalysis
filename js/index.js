@@ -1862,6 +1862,18 @@ $(function(){
             return '#eee';
         }
     }
+    //首页点击事件
+    $('#user-experience').mouseover(function(){
+        $('#experience-details').addClass("show");
+    });
+    $('#user-experience').mouseout(function(){
+        $('#experience-details').removeClass("show");
+    });
+    $('#experience-details').click(function(){
+        window.location.href='iptv_ue1.html'
+      });
+
+    
     window.addEventListener("resize", function () {
         maps.resize();
         ottCdn && ottCdn.resize();
