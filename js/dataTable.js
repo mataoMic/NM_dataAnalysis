@@ -74,7 +74,7 @@ var tableDatas = [{
     pic: '画面31'
 }]
 var OTT_company = {
-    hy:'烽火平台',
+    hy:'杭研平台',
     fh:'烽火平台',
     zx:'中兴平台',
     hw:'华为平台'

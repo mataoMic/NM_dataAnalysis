@@ -1,24 +1,18 @@
 /*
  * 效果页面
  * */
-var charts = {
-    iptv: '',
-    hw: '',
-    zx: '',
-    hy: '',
-    fh: ''
-}
-var xData = ['1小时', '2小时', '3小时', '4小时', '5小时', '6小时', '7小时','8小时']
-var yData = [60, 100, 100, 23, 88,98,88,100]
+var charts = {}
+var xData = ['1小时', '2小时', '3小时', '4小时', '5小时', '6小时', '7小时', '8小时']
+var yData = [60, 100, 100, 23, 88, 98, 88, 100]
 var options = {
     pic: {
-        backgroundColor: '#013954',
+        backgroundColor: '#040f3c',
         dataZoom: [{
             show: true,
             height: 15,
             xAxisIndex: [0],
             bottom: 10,
-            
+
             "start": 10,
             "end": 80,
             handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
@@ -26,12 +20,12 @@ var options = {
             handleStyle: {
                 color: "#5B3AAE",
             },
-            textStyle:{
-                color:"rgba(204,187,225,0.5)",
+            textStyle: {
+                color: "rgba(204,187,225,0.5)",
             },
-            fillerColor:"rgba(67,55,160,0.4)",
+            fillerColor: "rgba(67,55,160,0.4)",
             borderColor: "rgba(204,187,225,0.5)",
-    
+
         }, {
             type: "inside",
             show: true,
@@ -118,53 +112,52 @@ var options = {
             },
         }],
         series: [{
-                name: '液压异常报警',
-                type: 'line',
-                showAllSymbol: true,
-                symbol: 'circle',
-                symbolSize: 10,
-                lineStyle: {
-                    normal: {
-                        color: "#A582EA",
-                    },
+            name: '液压异常报警',
+            type: 'line',
+            showAllSymbol: true,
+            symbol: 'circle',
+            symbolSize: 10,
+            lineStyle: {
+                normal: {
+                    color: "#A582EA",
                 },
-                label: {
-                    show: true,
-                    position: 'top',
-                    textStyle: {
-                        color: '#A582EA',
-                    }
-                },
-                itemStyle: {
-                    color: "#fff",
-                    borderColor: "#A582EA",
-                    borderWidth: 2,
-                },
-                areaStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                offset: 0,
-                                color: 'rgba(43,193,145,0.3)'
-                            },
-                            {
-                                offset: 1,
-                                color: 'rgba(43,193,145,0)'
-                            }
-                        ], false),
-                    }
-                },
-                data: [4, 7, 5, 4, 3, 5, 8] //data.values
-            }
-        ]
+            },
+            label: {
+                show: true,
+                position: 'top',
+                textStyle: {
+                    color: '#A582EA',
+                }
+            },
+            itemStyle: {
+                color: "#fff",
+                borderColor: "#A582EA",
+                borderWidth: 2,
+            },
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(43,193,145,0.3)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(43,193,145,0)'
+                        }
+                    ], false),
+                }
+            },
+            data: [4, 7, 5, 4, 3, 5, 8] //data.values
+        }]
     },
-    subtitles:{
-        backgroundColor: '#013954',
+    subtitles: {
+        backgroundColor: '#040f3c',
         dataZoom: [{
             show: true,
             height: 15,
             xAxisIndex: [0],
             bottom: 10,
-            
+
             "start": 10,
             "end": 80,
             handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
@@ -172,12 +165,12 @@ var options = {
             handleStyle: {
                 color: "#5B3AAE",
             },
-            textStyle:{
-                color:"rgba(204,187,225,0.5)",
+            textStyle: {
+                color: "rgba(204,187,225,0.5)",
             },
-            fillerColor:"rgba(67,55,160,0.4)",
+            fillerColor: "rgba(67,55,160,0.4)",
             borderColor: "rgba(204,187,225,0.5)",
-    
+
         }, {
             type: "inside",
             show: true,
@@ -264,44 +257,43 @@ var options = {
             },
         }],
         series: [{
-                name: '液压异常报警',
-                type: 'line',
-                showAllSymbol: true,
-                symbol: 'circle',
-                symbolSize: 10,
-                lineStyle: {
-                    normal: {
-                        color: "#A582EA",
-                    },
+            name: '液压异常报警',
+            type: 'line',
+            showAllSymbol: true,
+            symbol: 'circle',
+            symbolSize: 10,
+            lineStyle: {
+                normal: {
+                    color: "#A582EA",
                 },
-                label: {
-                    show: true,
-                    position: 'top',
-                    textStyle: {
-                        color: '#A582EA',
-                    }
-                },
-                itemStyle: {
-                    color: "#fff",
-                    borderColor: "#A582EA",
-                    borderWidth: 2,
-                },
-                areaStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                offset: 0,
-                                color: 'rgba(43,193,145,0.3)'
-                            },
-                            {
-                                offset: 1,
-                                color: 'rgba(43,193,145,0)'
-                            }
-                        ], false),
-                    }
-                },
-                data: [4, 7, 5, 4, 3, 5, 8] //data.values
-            }
-        ]
+            },
+            label: {
+                show: true,
+                position: 'top',
+                textStyle: {
+                    color: '#A582EA',
+                }
+            },
+            itemStyle: {
+                color: "#fff",
+                borderColor: "#A582EA",
+                borderWidth: 2,
+            },
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(43,193,145,0.3)'
+                        },
+                        {
+                            offset: 1,
+                            color: 'rgba(43,193,145,0)'
+                        }
+                    ], false),
+                }
+            },
+            data: [4, 7, 5, 4, 3, 5, 8] //data.values
+        }]
     }
 }
 
@@ -321,4 +313,7 @@ function editCharts(id, ydata, xdata = ['5', '10', '15', '20', '25', '30', '60']
 (function () {
     initCharts('pic', yData)
     initCharts('subtitles', yData)
+    for (const key in charts) {
+        charts[key].resize()
+    }
 })();

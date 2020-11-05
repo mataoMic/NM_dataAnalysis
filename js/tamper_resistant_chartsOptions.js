@@ -6,7 +6,7 @@ var xData = ['1小时', '2小时', '3小时', '4小时', '5小时', '6小时', '
 var yData = [60, 100, 100, 23, 88,98,88,100]
 var options = {
     iptv:{
-        backgroundColor: '#013954',
+        backgroundColor: '#040f3c',
         title: {
             text: '',
             textStyle: {
@@ -162,7 +162,7 @@ var options = {
         ]
     },
     ott:{
-        backgroundColor: '#013954',
+        backgroundColor: '#040f3c',
         title: {
             text: '',
             textStyle: {

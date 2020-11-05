@@ -1,4 +1,6 @@
 document.write("<script language=javascript src='/js/dataTable.js'></script>");
+document.write("<script language=javascript src='/js/global.js'></script>");
+var content_query
 layui.use(['form'], function () {
     var form = layui.form;
     // iptv
@@ -68,17 +70,43 @@ layui.use(['form'], function () {
     });
     form.on('submit', function (data) {
         event.preventDefault()
-        layer.msg('查询成功', {
-            icon: 1,
-            time: 1000 //2秒关闭（如果不配置，默认是3秒）
+        layer.msg('查询中。。', {
+            icon: 2,
+            time: 15000 //2秒关闭（如果不配置，默认是3秒）
           }, function(){
             //2秒后自动执行这里面的内容
           }); 
         //表单数据formData
         var formData = data.field;
-        // editCharts()
-        console.log($(this).attr('id'))
         let id = $(this).attr('id')
-        editCharts(id,[99,55,44,66,12,66,12])
+       switch (id) {
+           case 'iptv':
+            content_query(formData,id)
+               break;
+           default:
+            content_query(formData,id)
+               break;
+       }
+        console.log($(this).attr('id'))
+        // editCharts(id,[99,55,44,66,12,66,12])
     });
+})
+$(function(params) {
+    content_query = _debounce(function (param, id) {
+        var data = {
+            StartTime:'2014年01月01日',
+            EndTime:'2020年05月19日',
+            SelectedChannelType:'1'
+        }
+        $.ajax({
+            type: "POST",
+            url: SERVER_URL+"/Alarm/DegradeResistantList",
+            data:data,
+            dataType: "json",
+            success: function (response) {
+                editCharts(id, [99, 55, 44, 66, 12, 66, 12], )
+                console.log(response)
+            }
+        });
+    }, 500)
 })
