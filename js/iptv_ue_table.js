@@ -1,56 +1,22 @@
+document.write("<script language=javascript src='/js/constant.js'></script>");
+function status(res){
+  if(res){
+    return '是'
+  }else{
+    return '否'
+  }
+}
+
 
 //动态实现table表格
 layui.use('table', function(){
     var table = layui.table;
-    
-    //第一个实例
-    // table.render({
-    //   elem: '#iptv-table',
-    //   height: 319,
-    //   url: '/demo/table/user/', //数据接口
-    //   page: true, //开启分页
-    //   cols: [[ //表头
-    //     {field: 'id', title: '日期', width:'15%', fixed: 'left'}
-    //     ,{field: 'username', title: '所有测试节目总数', width:'20%'}
-    //     ,{field: 'sex', title: '测试失败节目总数', width:'22%'}
-    //     ,{field: 'city', title: '新增节目总数', width:'21%'} 
-    //     ,{field: 'sign', title: '新增节目测试成功率', width: '22%'}
-    //   ]]
-    // });
     //第二个实例
     table.render({
       elem: '#lost-table',
       height: 319,
       cellMinWidth: 120, //全局定义常规单元格的最小宽度，
-      data:[
-        {"date":"2020-07-07","time":"05:51:12","one":"娱乐","two":"娱乐","order":3,"program":"张钧甯赤脚上树拿蛋","1":1,"11413090":11413039,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:37","one":"娱乐","two":"娱乐","order":4,"program":"大张伟张钧甯相拥而泣","1":1,"11413090":11354974,"result":"失败"},
-        {"date":"2020-07-07","time":"05:51:42","one":"娱乐","two":"娱乐","order":5,"program":"张钧甯帮大张伟克服逆境","1":1,"11413090":11296668,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:42","one":"娱乐","two":"娱乐","order":6,"program":"大张伟张钧甯水下尖叫","1":1,"11413090":11233704,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:43","one":"娱乐","two":"娱乐","order":7,"program":"韩雪受罚戴地狱头盔","1":1,"11413090":11233567,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:44","one":"娱乐","two":"娱乐","order":8,"program":"白雪组合协力攀瀑布","1":1,"11413090":11233504,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:44","one":"娱乐","two":"娱乐","order":9,"program":"刘语熙谢天华敏捷捕鼠","1":1,"11413090":11233588,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:47","one":"娱乐","two":"全部","order":1,"program":"娱乐专题-天真有邪-林宥嘉-第26届东方风云榜","1":1,"11413090":569924042,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:47","one":"娱乐","two":"全部","order":2,"program":"娱乐专题-往后余生-马良-第26届东方风云榜","1":1,"11413090":569924032,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:48","one":"娱乐","two":"全部","order":3,"program":"鞠婧祎叹云兮自带仙气","1":1,"11413090":569924017,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:48","one":"娱乐","two":"全部","order":4,"program":"娱乐专题-Blah-Blah-乐华七子NEXT-第26届东方风云榜","1":1,"11413090":569924007,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:49","one":"娱乐","two":"全部","order":5,"program":"娱乐专题-说谎-林宥嘉-第26届东方风云榜","1":1,"11413090":569923982,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:50","one":"娱乐","two":"全部","order":6,"program":"娱乐专题-无药可救-张杰-第26届东方风云榜","1":1,"11413090":569923972,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:50","one":"娱乐","two":"全部","order":7,"program":"娱乐专题-去流浪-周笔畅-第26届东方风云榜","1":1,"11413090":569923962,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:51","one":"娱乐","two":"全部","order":8,"program":"吉克隽逸热情点燃全场","1":1,"11413090":569923937,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:51","one":"娱乐","two":"全部","order":9,"program":"娱乐专题-原来你也在这里-周笔畅-第26届东方风云榜","1":1,"11413090":569923927,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:52","one":"娱乐","two":"全部","order":10,"program":"娱乐专题-岁月神偷-周笔畅-第26届东方风云榜","1":1,"11413090":569923917,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:53","one":"娱乐","two":"全部","order":11,"program":"娱乐专题-Bamboo竹-张杰-第26届东方风云榜","1":1,"11413090":569923902,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:53","one":"娱乐","two":"全部","order":12,"program":"娱乐专题-别废话-袁娅维-第26届东方风云榜","1":1,"11413090":569923887,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:54","one":"娱乐","two":"全部","order":13,"program":"吴青峰柔情演绎起风了","1":1,"11413090":569923872,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:54","one":"娱乐","two":"全部","order":14,"program":"娱乐专题-大中国-周笔畅许魏洲陈粒-第26届东方风云榜","1":1,"11413090":569923847,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:55","one":"娱乐","two":"全部","order":15,"program":"娱乐专题-Pull Up-蔡徐坤-第26届东方风云榜","1":1,"11413090":569924443,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:56","one":"娱乐","two":"全部","order":16,"program":"娱乐专题-花开-周深-第26届东方风云榜","1":1,"11413090":569924433,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:57","one":"娱乐","two":"全部","order":17,"program":"娱乐专题-YOU-林彦俊-第26届东方风云榜","1":1,"11413090":569924419,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:57","one":"娱乐","two":"全部","order":18,"program":"娱乐专题-那好吧-李艺彤-第26届东方风云榜","1":1,"11413090":569924404,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:58","one":"娱乐","two":"全部","order":19,"program":"娱乐专题-太极禅-霍尊-第26届东方风云榜","1":1,"11413090":569924389,"result":"成功"},
-        {"date":"2020-07-07","time":"05:51:59","one":"娱乐","two":"全部","order":20,"program":"娱乐专题-只凝视着你-大黑摩季-第26届东方风云榜","1":1,"11413090":569924369,"result":"成功"},
-        {"date":"2020-07-07","time":"05:52:00","one":"娱乐","two":"全部","order":21,"program":"娱乐专题-佛系少女-冯提莫-第26届东方风云榜","1":1,"11413090":569924359,"result":"成功"},],
+      data:datafail,
       cols: [[ //表头
         {field: 'date', title: '日期' },
         {field: 'time', title: '时间'},
@@ -66,6 +32,50 @@ layui.use('table', function(){
      //展示已知数据
     table.render({
         elem: '#iptv-table',
+        height: 319,
+        cellMinWidth: 249, //全局定义常规单元格的最小宽度，
+        cols: [[ //标题栏
+            {field: 'date', title: '日期'}
+                ,{field: 'testNumber', title: '所有测试节目总数'}
+                ,{field: 'failuresNumber', title: '测试失败节目总数'}
+                ]],
+        data:data
+        //,skin: 'line' //表格风格
+        // even: true
+        //,page: true //是否显示分页
+        //,limits: [5, 7, 10]
+        //,limit: 5 //每页默认显示的数量
+    });
+     //展示已知数据
+    table.render({
+        elem: '#live-iptv-table',
+        height: 319,
+        cellMinWidth: 110, //全局定义常规单元格的最小宽度，
+        cols: [[ //标题栏
+              {field: 'CCTV1Status', title: 'CCTV1状态',templet:(res)=>status(res) }
+                ,{field: 'CCTV1Time', title: 'CCTV1启动时刻',width:180 }
+                ,{field: 'CCTV2Status', title: 'CCTV2状态',templet:(res)=>status(res) }
+                ,{field: 'CCTV1Time', title: 'CCTV2启动时刻'}
+                ,{field: 'CloseFlag', title: '关闭状态',templet:(res)=>status(res) }
+                ,{field: 'CloseTime', title: '关闭时刻'}
+                ,{field: 'CompleteFlag', title: '首页加载状态',templet:(res)=>status(res) }
+                ,{field: 'CompleteTime', title: '首页加载时刻'}
+                ,{field: 'Duration', title: '开机时长'}
+                ,{field: 'OpenFlag', title: '开机状态',templet:(res)=>status(res) }
+                ,{field: 'OpenTime', title: '开机时刻'}
+                ,{field: 'OverFlag', title: '超时状态',templet:(res)=>status(res) }
+                ,{field: 'OverTime', title: '超时时刻'}
+                ]],
+        data:dataIptvUe,
+        //,skin: 'line' //表格风格
+        // even: true
+        //,page: true //是否显示分页
+        //,limits: [5, 7, 10]
+        //,limit: 5 //每页默认显示的数量
+    });
+     //展示已知数据
+    table.render({
+        elem: '#live-ott-table',
         height: 319,
         cellMinWidth: 249, //全局定义常规单元格的最小宽度，
         cols: [[ //标题栏

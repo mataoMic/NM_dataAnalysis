@@ -347,3 +347,13 @@ body{
     background-color: #0e487c;
 }
 
+
+/* jiangna */
+
+.experience-details{
+    position: absolute;
+    right: 10px;
+    display: none;
+    color: #0cf;
+}
+
